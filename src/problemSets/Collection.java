@@ -31,7 +31,8 @@ public class Collection <T extends Comparable> implements Cloneable{
 	
 	public boolean contains(T object) {
 		int position = 0;
-		while(array[position] != object && position < array.length) {
+		//important to put 
+		while(position < array.length && !array[position].equals(object) ) {
 			position++;
 		}
 		return array[position] != null;
@@ -55,5 +56,8 @@ public class Collection <T extends Comparable> implements Cloneable{
 		return clone;
 	}
 	
-	
+	private static class Inner{
+		int memberVariable;
+		int otherMemberVariable;
+	}
 }

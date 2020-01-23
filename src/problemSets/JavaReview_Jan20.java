@@ -9,7 +9,7 @@ public class JavaReview_Jan20 {
 	public static void main(String[] args) throws FileNotFoundException {
 		// TODO Auto-generated method stub
 		String errorMessage = "This program needs a command line argument to run";
-		if(args.length <= 1) {
+		if(args.length < 1) {
 			System.out.println(errorMessage);
 		}
 		else {
