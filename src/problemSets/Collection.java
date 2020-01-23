@@ -6,11 +6,12 @@ public class Collection <T extends Comparable> implements Cloneable{
 
 	private T[] array;
 	private int size;
-	private int capacity = 10;
+	private int capacity;
 	
 	Collection(){
 		array = (T[]) new Object[capacity];
 		size = 0;
+		capacity = 10;
 	}
 	
 	public boolean isEmpty() {

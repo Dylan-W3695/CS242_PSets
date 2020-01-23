@@ -7,7 +7,7 @@ public class JavaReview_Jan20 {
 
 	}
 
-	public <T> int count(T object, T[] objectArray) {
+	public static <T> int count(T object, T[] objectArray) {
 		int count = 0;
 		for (int i = 0; i < objectArray.length; i++) {
 			if (object.equals(objectArray[i])) {
@@ -17,5 +17,9 @@ public class JavaReview_Jan20 {
 		return count;
 	}
 	
-	
+	public void printCommandArgs(String[] args) {
+		for(int i = 0; i < args.length; i++) {
+			System.out.println(args[i]);
+		}
+	}
 }
