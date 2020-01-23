@@ -30,13 +30,11 @@ public class Collection <T extends Comparable> implements Cloneable{
 	}
 	
 	public boolean contains(T object) {
-		boolean found = false;
-		for(int i = 0; i < size && found == false; i++) {
-			if(array[i].equals(object)) {
-				found = true;
-			}
+		int position = 0;
+		while(array[position] != object && position < array.length) {
+			position++;
 		}
-		return found;
+		return array[position] != null;
 	}
 	
 	public T findMin() {
